@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+    background-color: #202020;    
+    color: #c6c6c6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+.box1 {
+    width: 400px;
+    height: 80px;
+    border-radius: 10px;    
+    background-color: #626262;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    position: relative;    
+}
+
+.box2 {
+    width: 400px;
+    height: 150px;
+    border-bottom-left-radius: 10px;    
+    border-bottom-right-radius: 10px;    
+    border-top-right-radius: 10px;    
+    background-color: #626262;
+    display: flex;
+    justify-content: center;    
+    position: relative;
+    flex-direction: column;     
+    padding-left: 20px;
+}
+
+.union {
+    width: 200px;
+    height: 10px;
+    border-radius: 10px;    
+    background-color: #626262;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    position: relative;    
+}
+
+.box1::after,
+.box2::after {
+    content: " ";    
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;    
+    background-color: #c4c2c2;
+    border: solid 10px #626262;
+    right: -15px;
+    position: absolute;
+    z-index: 1;    
+}
+
+.box2::after {
+    left: -15px;
+}
+
+.box2::before {
+    content: "Matrix: prepare-release-on-se...";            
+    height: 25px;
+    width: 300px;
+    border-top-left-radius: 10px;  
+    border-top-right-radius: 10px;  
+    background-color: #626262;    
+    top: -25px;
+    left: 0px;
+    position: absolute;
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;       
+    padding-left: 10px;
+}
+
+.link {
+    color: #8e8e8e;
+}
